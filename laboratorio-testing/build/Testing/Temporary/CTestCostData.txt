@@ -1,0 +1,26 @@
+CalculatorTest.AddPositiveNumbers 1 0.00287836
+CalculatorTest.AddNegativeNumbers 1 0.00227452
+CalculatorTest.SubtractNumbers 1 0.00231966
+CalculatorTest.MultiplyNumbers 1 0.00210329
+CalculatorTest.DivideNumbers 1 0.00203778
+CalculatorTest.DivideByZeroThrowsException 1 0.00238826
+CalculatorTest.DetectEvenNumber 1 0.00196083
+CalculatorTest.DetectOddNumber 1 0.00224823
+StringUtilsTest.ConvertTextToUppercase 1 0.00202597
+StringUtilsTest.ConvertMixedTextToUppercase 1 0.00202762
+StringUtilsTest.DetectSimplePalindrome 1 0.00194316
+StringUtilsTest.DetectPalindromeWithSpaces 1 0.00258856
+StringUtilsTest.DetectNonPalindrome 1 0.00214696
+StringUtilsTest.CountVowels 1 0.00203544
+StringUtilsTest.CountVowelsInTextWithoutVowels 1 0.00223866
+GradeUtilsTest.CalculateAverage 1 0.00199623
+GradeUtilsTest.AverageEmptyVectorThrowsException 1 0.00208877
+GradeUtilsTest.PassingGrade 1 0.00242927
+GradeUtilsTest.FailingGrade 1 0.00259695
+GradeUtilsTest.LetterGradeA 1 0.00210236
+GradeUtilsTest.LetterGradeB 1 0.00228599
+GradeUtilsTest.LetterGradeC 1 0.00201542
+GradeUtilsTest.LetterGradeD 1 0.00221121
+GradeUtilsTest.LetterGradeF 1 0.002336
+GradeUtilsTest.InvalidGradeThrowsException 1 0.00229447
+---
