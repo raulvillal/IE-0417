@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++17 --coverage -O0 -g
 

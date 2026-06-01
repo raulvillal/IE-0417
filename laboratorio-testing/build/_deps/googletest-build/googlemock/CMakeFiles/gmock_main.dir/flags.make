@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/_deps/googletest-src/googlemock/include -isystem /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/_deps/googletest-src/googlemock -isystem /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/_deps/googletest-src/googletest/include -isystem /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+CXX_FLAGS = -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers --coverage -O0 -g
 
