@@ -91,12 +91,15 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/quoted_string.h \
+  /usr/include/c++/13/bits/random.h \
+  /usr/include/c++/13/bits/random.tcc \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/shared_ptr.h \
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
   /usr/include/c++/13/bits/shared_ptr_base.h \
+  /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/std_function.h \
@@ -113,6 +116,7 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_multiset.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
@@ -138,6 +142,7 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
@@ -172,11 +177,14 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/c++/13/memory \
   /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
   /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/random \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/set \
   /usr/include/c++/13/sstream \
@@ -186,6 +194,18 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/tr1/bessel_function.tcc \
+  /usr/include/c++/13/tr1/beta_function.tcc \
+  /usr/include/c++/13/tr1/ell_integral.tcc \
+  /usr/include/c++/13/tr1/exp_integral.tcc \
+  /usr/include/c++/13/tr1/gamma.tcc \
+  /usr/include/c++/13/tr1/hypergeometric.tcc \
+  /usr/include/c++/13/tr1/legendre_function.tcc \
+  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/13/tr1/poly_hermite.tcc \
+  /usr/include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/include/c++/13/tr1/special_function_util.h \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -206,6 +226,7 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/regex.h \
   /usr/include/sched.h \
@@ -235,11 +256,20 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -331,6 +361,7 @@ CMakeFiles/run_tests.dir/tests/test_calculator.cpp.o: /home/raulpro/Diseño_Soft
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -1102,8 +1133,6 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
@@ -1129,8 +1158,6 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/include/string_utils.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -1164,17 +1191,55 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
-/usr/include/c++/13/bits/streambuf.tcc:
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
 /usr/include/c++/13/bits/stl_map.h:
 
 /usr/include/c++/13/locale:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
 /usr/include/c++/13/bits/stream_iterator.h:
 
@@ -1183,8 +1248,6 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/13/bits/functexcept.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
@@ -1206,17 +1269,11 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 
 /usr/include/c++/13/bits/erase_if.h:
 
-/usr/include/c++/13/bits/stringfwd.h:
-
 /usr/include/c++/13/bits/shared_ptr.h:
 
 /usr/include/c++/13/bits/std_mutex.h:
 
 /usr/include/c++/13/bits/stl_construct.h:
-
-/usr/include/c++/13/bits/range_access.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /usr/include/c++/13/bits/quoted_string.h:
 
@@ -1242,6 +1299,12 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/time.h:
+
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
 /usr/include/c++/13/bits/stl_heap.h:
@@ -1251,8 +1314,6 @@ CMakeFiles/run_tests.dir/tests/test_string_utils.cpp.o: /home/raulpro/Diseño_So
 /usr/include/c++/13/bits/locale_facets.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
-
-/usr/include/c++/13/cxxabi.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -1300,6 +1361,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 
 /usr/include/c++/13/ext/atomicity.h:
 
+/usr/include/c++/13/tr1/gamma.tcc:
+
 /home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/include/calculator.h:
 
 /usr/include/c++/13/bits/basic_ios.h:
@@ -1320,8 +1383,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
 _deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h:
@@ -1331,6 +1392,8 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 /usr/include/c++/13/bits/stl_vector.h:
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
+
+/usr/include/c++/13/bits/random.h:
 
 /usr/include/alloca.h:
 
@@ -1346,21 +1409,25 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/linux/stddef.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/c++/13/bits/string_view.tcc:
-
 _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
+/usr/include/c++/13/bits/stl_numeric.h:
+
 _deps/googletest-src/googletest/include/gtest/gtest_prod.h:
 
 /usr/include/assert.h:
 
 /usr/include/c++/13/bits/stl_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
 
 /usr/include/c++/13/bits/move.h:
 
@@ -1374,13 +1441,11 @@ _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 
 /usr/include/asm-generic/posix_types.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
 /usr/include/stdc-predef.h:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
-
-_deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -1401,6 +1466,10 @@ _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/math.h:
 
 /usr/include/c++/13/system_error:
 
@@ -1438,6 +1507,8 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/c++/13/bits/stl_relops.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
@@ -1449,10 +1520,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/13/bits/unique_lock.h:
-
-/usr/include/c++/13/mutex:
 
 /usr/include/c++/13/bits/allocated_ptr.h:
 
@@ -1468,8 +1535,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/cstdio:
 
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
 /usr/include/c++/13/backward/auto_ptr.h:
 
 /usr/include/c++/13/backward/binders.h:
@@ -1484,15 +1549,27 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/condition_variable:
 
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/c++/13/iosfwd:
+
 /usr/include/c++/13/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/c++/13/bits/unique_ptr.h:
 
+/usr/include/c++/13/bits/streambuf.tcc:
+
+/usr/include/c++/13/bits/specfun.h:
+
 /usr/include/c++/13/atomic:
 
 /usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/cxxabi.h:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
 
 /usr/include/libintl.h:
 
@@ -1510,15 +1587,19 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/bits/chrono.h:
 
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h:
+
 /usr/include/c++/13/ostream:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
@@ -1530,6 +1611,22 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/streambuf:
 
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/13/bits/string_view.tcc:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+_deps/googletest-src/googletest/include/gtest/gtest-message.h:
+
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
+/usr/include/c++/13/mutex:
+
 /usr/include/c++/13/optional:
 
 /usr/include/c++/13/bits/vector.tcc:
@@ -1540,7 +1637,11 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/include/c++/13/cassert:
 
+/usr/include/c++/13/tr1/poly_hermite.tcc:
+
 /usr/include/c++/13/cerrno:
+
+/usr/include/c++/13/cmath:
 
 /usr/include/c++/13/ctime:
 
@@ -1552,15 +1653,21 @@ _deps/googletest-src/googletest/include/gtest/gtest-matchers.h:
 
 /usr/include/c++/13/debug/assertions.h:
 
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/c++/13/exception:
+
+/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
 /usr/include/c++/13/ext/aligned_buffer.h:
 
 /usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
-
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/13/ext/alloc_traits.h:
 
@@ -1580,6 +1687,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-matchers.h:
 
 /usr/include/c++/13/functional:
 
+/usr/include/c++/13/tr1/bessel_function.tcc:
+
 /usr/include/c++/13/initializer_list:
 
 /usr/include/c++/13/ios:
@@ -1588,17 +1697,11 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/c++/13/iostream:
 
-/usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
-
 /usr/include/c++/13/istream:
 
 /usr/include/c++/13/bits/ios_base.h:
 
 /usr/include/c++/13/iterator:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -1608,9 +1711,17 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/c++/13/exception:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
-/usr/include/c++/13/pstl/glue_memory_defs.h:
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/c++/13/numeric:
+
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/13/bits/random.tcc:
+
+/usr/include/c++/13/random:
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
@@ -1618,17 +1729,31 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/c++/13/string:
 
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/c++/13/map:
 
 /usr/include/c++/13/string_view:
 
 /usr/include/features-time64.h:
 
+/usr/include/c++/13/tr1/ell_integral.tcc:
+
+/usr/include/c++/13/tr1/exp_integral.tcc:
+
+/usr/include/c++/13/bits/range_access.h:
+
+/usr/include/c++/13/tr1/hypergeometric.tcc:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/usr/include/c++/13/tr1/modified_bessel_func.tcc:
+
 /usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/c++/13/tuple:
-
-/usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/bits/allocator.h:
 
@@ -1647,8 +1772,6 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 /usr/include/c++/13/debug/debug.h:
 
 /usr/include/linux/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -1696,8 +1819,6 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
@@ -1708,32 +1829,4 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/c++/13/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-arch.h:
-
-/usr/include/c++/13/iosfwd:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:

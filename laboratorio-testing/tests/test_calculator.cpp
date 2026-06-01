@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "calculator.h"
+#include <random>
 
 TEST(CalculatorTest, AddPositiveNumbers) {
     EXPECT_EQ(add(2, 3), 5);
@@ -45,4 +46,28 @@ TEST(CalculatorTest, AssertBeforeDivision) {
     ASSERT_NE(divisor, 0);
 
     EXPECT_EQ(divide(10, divisor), 5);
+}
+
+TEST(CalculatorTest, DivideNegativeNumbers) {
+    EXPECT_EQ(divide(-10, -2), 5);
+}
+
+TEST(CalculatorTest, DividePositiveByNegative) {
+    EXPECT_EQ(divide(10, -2), -5);
+}
+
+TEST(CalculatorTest, ZeroIsEven) {
+    EXPECT_TRUE(is_even(0));
+}
+
+TEST(CalculatorTest, RandomAdditionsWithFixedSeed) {
+    std::mt19937 generator(12345);
+    std::uniform_int_distribution<int> distribution(-100, 100);
+
+    for (int i = 0; i < 10; i++) {
+        int a = distribution(generator);
+        int b = distribution(generator);
+
+        EXPECT_EQ(add(a, b), a + b);
+    }
 }
