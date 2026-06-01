@@ -1,5 +1,0 @@
-if(EXISTS "/home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/run_tests[1]_tests.cmake")
-  include("/home/raulpro/Diseño_Software/IE-0417/laboratorio-testing/build/run_tests[1]_tests.cmake")
-else()
-  add_test(run_tests_NOT_BUILT run_tests_NOT_BUILT)
-endif()
