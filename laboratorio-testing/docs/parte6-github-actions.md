@@ -287,3 +287,204 @@ CI ayuda a mejorar la colaboración porque todos los integrantes pueden confiar 
 Esto facilita detectar errores temprano, mantener una rama principal más estable y revisar con mayor seguridad los cambios propuestos por otras personas.
 
 ---
+
+## Fallo intencional en CI
+
+# Parte 11: fallo intencional en CI
+
+## Objetivo de la parte
+
+En esta parte se provocó un fallo intencional en una prueba unitaria para observar cómo GitHub Actions detecta errores cuando las pruebas no pasan correctamente.
+
+El objetivo fue comprobar que la integración continua no solo ejecuta pruebas exitosas, sino que también permite identificar fallos cuando se sube código incorrecto al repositorio.
+
+---
+
+## Cambio realizado para provocar el fallo
+
+Se modificó temporalmente una prueba en el archivo:
+
+```bash id="zss3la"
+tests/test_calculator.cpp
+```
+
+La prueba original verificaba correctamente que la suma de `2 + 3` fuera igual a `5`:
+
+```cpp id="hzhzf4"
+EXPECT_EQ(add(2, 3), 5);
+```
+
+Para provocar el fallo intencional, se cambió el valor esperado por `999`:
+
+```cpp id="ilmy68"
+EXPECT_EQ(add(2, 3), 999);
+```
+
+Este cambio hizo que la prueba esperara un resultado incorrecto.
+
+---
+
+## Ejecución local con fallo
+
+Después de modificar la prueba, se ejecutó localmente:
+
+```bash id="ofhjb3"
+./run_tests
+```
+
+Google Test ejecutó 42 pruebas distribuidas en 3 conjuntos de pruebas:
+
+```text id="ly1qs2"
+[==========] Running 42 tests from 3 test suites.
+```
+
+La prueba que falló fue:
+
+```text id="lizc14"
+CalculatorTest.AddPositiveNumbers
+```
+
+El mensaje de error mostró que la función `add(2, 3)` devolvió `5`, pero la prueba esperaba incorrectamente `999`:
+
+```text id="iixz6t"
+Expected equality of these values:
+  add(2, 3)
+    Which is: 5
+  999
+```
+
+El resumen final indicó que 41 pruebas pasaron y 1 prueba falló:
+
+```text id="ug9nhy"
+[  PASSED  ] 41 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] CalculatorTest.AddPositiveNumbers
+
+ 1 FAILED TEST
+```
+
+Esto confirmó que el fallo intencional fue detectado correctamente por Google Test.
+
+---
+
+## Ejecución en GitHub Actions con fallo
+
+Después de confirmar el fallo localmente, se subió el cambio al repositorio usando Git.
+
+Al ejecutarse el workflow en GitHub Actions, el proceso falló en el paso encargado de correr las pruebas.
+
+Esto ocurrió porque el comando:
+
+```bash id="p5sh4x"
+./run_tests
+```
+
+retornó un resultado fallido debido a la prueba `CalculatorTest.AddPositiveNumbers`.
+
+La evidencia del workflow fallido se muestra en la siguiente imagen:
+
+
+![Figura 2. Workflow de GitHub Actions fallido por prueba intencional](./parte11_workflow_fallido_ci.png)
+
+---
+
+## ¿Qué mensaje mostró el workflow?
+
+El workflow mostró que el proceso no podía completarse correctamente porque una prueba falló.
+
+El fallo estaba asociado al paso de ejecución de pruebas, ya que `run_tests` detectó que el resultado esperado no coincidía con el resultado obtenido.
+
+La prueba esperaba `999`, pero la función realmente devolvió `5`.
+
+Esto demuestra que GitHub Actions ejecuta las pruebas de forma automática y marca el workflow como fallido cuando alguna prueba no pasa.
+
+---
+
+## Corrección realizada
+
+Después de observar el fallo, se corrigió la prueba para que volviera a tener el resultado esperado correcto.
+
+Se cambió:
+
+```cpp id="oqx8pu"
+EXPECT_EQ(add(2, 3), 999);
+```
+
+por:
+
+```cpp id="um0p71"
+EXPECT_EQ(add(2, 3), 5);
+```
+
+Con esta corrección, la prueba volvió a representar el comportamiento correcto de la función `add()`.
+
+---
+
+## Ejecución en GitHub Actions después de corregir
+
+Después de corregir la prueba, se subió nuevamente el cambio al repositorio.
+
+GitHub Actions ejecutó otra vez el workflow y, esta vez, el proceso finalizó correctamente.
+
+La evidencia del workflow exitoso después de la corrección se muestra en la siguiente imagen:
+
+
+![Figura 3. Workflow de GitHub Actions exitoso después de corregir la prueba](./parte11_workflow_corregido_ci.png)
+
+---
+
+## Resultado obtenido
+
+El resultado de esta parte fue exitoso porque se comprobó que GitHub Actions puede detectar fallos en las pruebas automáticamente.
+
+Primero, el workflow falló cuando se subió una prueba con un resultado esperado incorrecto.
+
+Después, al corregir la prueba y subir nuevamente los cambios, el workflow volvió a ejecutarse correctamente.
+
+---
+
+## ¿Qué se aprendió?
+
+Se aprendió que GitHub Actions permite detectar errores automáticamente cuando se suben cambios al repositorio.
+
+También se observó que una prueba fallida no solo aparece localmente, sino que también puede detener el proceso de integración continua.
+
+Además, se comprendió que no se deben dejar pruebas fallidas en la rama de trabajo, porque eso impide confirmar que el proyecto se encuentra en un estado estable.
+
+---
+
+## Preguntas de reflexión
+
+### 1. ¿Por qué es útil ver una prueba fallar al menos una vez?
+
+Es útil porque permite comprobar que las pruebas realmente detectan errores.
+
+Si una prueba nunca falla, no siempre queda claro si está verificando correctamente el comportamiento esperado. Al provocar un fallo intencional, se observa que la prueba sí puede detectar un resultado incorrecto.
+
+---
+
+### 2. ¿Qué diferencia hay entre una prueba fallando localmente y una prueba fallando en CI?
+
+Cuando una prueba falla localmente, el error se observa en la computadora del desarrollador.
+
+Cuando una prueba falla en CI, el error se observa en un ambiente externo y automatizado, como GitHub Actions.
+
+La ventaja de CI es que permite confirmar que el fallo no depende solamente de la computadora local, sino que también afecta la ejecución automática del proyecto en el repositorio.
+
+---
+
+### 3. ¿Por qué no se debería dejar código con pruebas fallidas en la rama principal?
+
+No se debería dejar código con pruebas fallidas en la rama principal porque eso indica que el proyecto no está en un estado estable.
+
+Si otras personas trabajan a partir de una rama con pruebas fallidas, podrían enfrentar errores innecesarios o integrar más cambios sobre una base incorrecta.
+
+---
+
+### 4. ¿Qué aporta CI a la calidad del software?
+
+CI aporta calidad porque ejecuta verificaciones automáticas cada vez que se suben cambios.
+
+Esto ayuda a detectar errores temprano, evita integrar código que rompe pruebas existentes y permite mantener el proyecto en un estado más confiable.
+
+---

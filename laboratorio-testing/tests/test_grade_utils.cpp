@@ -79,3 +79,29 @@ TEST(GradeUtilsTest, GradeBoundaryBetweenBAndA) {
 TEST(GradeUtilsTest, GradeAboveMaximumThrowsException) {
     EXPECT_THROW(letter_grade(101), std::invalid_argument);
 }
+
+//Parte 12
+
+TEST(GradeUtilsTest, ValidGradeNormalValue) {
+    EXPECT_TRUE(is_valid_grade(85));
+}
+
+TEST(GradeUtilsTest, InvalidGradeNormalValue) {
+    EXPECT_FALSE(is_valid_grade(150));
+}
+
+TEST(GradeUtilsTest, ValidGradeLowerBoundary) {
+    EXPECT_TRUE(is_valid_grade(0));
+}
+
+TEST(GradeUtilsTest, ValidGradeUpperBoundary) {
+    EXPECT_TRUE(is_valid_grade(100));
+}
+
+TEST(GradeUtilsTest, InvalidGradeBelowLowerBoundary) {
+    EXPECT_FALSE(is_valid_grade(-1));
+}
+
+TEST(GradeUtilsTest, InvalidGradeAboveUpperBoundary) {
+    EXPECT_FALSE(is_valid_grade(101));
+}
