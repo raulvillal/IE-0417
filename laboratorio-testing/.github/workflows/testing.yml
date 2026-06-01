@@ -2,7 +2,7 @@ name: C++ testing
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "laboratorio-testing-branch" ]
   pull_request:
     branches: [ "main" ]
 
