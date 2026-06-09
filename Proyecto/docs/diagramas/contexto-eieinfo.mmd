@@ -1,0 +1,42 @@
+flowchart LR
+    visitante[Visitante publico]
+    estudiante[Estudiante]
+    profesor[Profesor]
+    administrativo[Administrativo]
+    director[Director / jefatura]
+    alumnus[Alumni]
+    postulante[Postulante externo]
+
+    subgraph eieinfo["EIEInfo - monolito Django"]
+        web[Portal publico / webpage]
+        est[Portal estudiantes]
+        prof[Portal profesores]
+        adm[Portal administrativos]
+        dom[Apps de dominio: cursos, asistencias, inventario, proyectos, TFG, firma digital]
+        wiki[Wiki y editores de contenido]
+    end
+
+    db[(MariaDB / MySQL)]
+    media[(Volumen media)]
+    static[(Volumen static)]
+    nginx[Nginx reverse proxy]
+    gunicorn[Gunicorn / WSGI]
+    smtp[SMTP eie.ucr.ac.cr]
+    google[Google APIs]
+    facebook[Facebook API]
+
+    visitante --> nginx
+    estudiante --> nginx
+    profesor --> nginx
+    administrativo --> nginx
+    director --> nginx
+    alumnus --> nginx
+    postulante --> nginx
+
+    nginx --> gunicorn --> eieinfo
+    eieinfo --> db
+    eieinfo --> media
+    eieinfo --> static
+    eieinfo --> smtp
+    eieinfo --> google
+    eieinfo --> facebook

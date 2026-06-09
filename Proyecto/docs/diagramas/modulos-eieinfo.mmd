@@ -1,0 +1,56 @@
+flowchart TB
+    root[eieinfo.urls]
+
+    root --> webpage
+    root --> estudiantes
+    root --> profesores
+    root --> administrativos
+    root --> cursos
+    root --> trabajos_finales
+    root --> trabajo_final_de_graduacion
+    root --> inventario
+    root --> firma_digital
+    root --> anuncios
+    root --> eventos
+    root --> proyectos
+    root --> laboratorios
+    root --> atributos
+    root --> alumni
+    root --> postulaciones
+    root --> wiki
+
+    profesores --> administrativos
+    profesores --> cursos
+    profesores --> estudiantes
+    profesores --> proyectos
+    profesores --> laboratorios
+    profesores --> trabajos_finales
+
+    estudiantes --> cursos
+    estudiantes --> administrativos
+    estudiantes --> laboratorios
+    estudiantes --> proyectos
+    estudiantes --> trabajos_finales
+
+    administrativos --> inventario
+    administrativos --> estudiantes
+    administrativos --> cursos
+    administrativos --> profesores
+
+    trabajos_finales --> estudiantes
+    trabajos_finales --> profesores
+    trabajos_finales --> administrativos
+    trabajos_finales --> proyectos
+    trabajos_finales --> laboratorios
+
+    trabajo_final_de_graduacion --> estudiantes
+    trabajo_final_de_graduacion --> profesores
+    trabajo_final_de_graduacion --> administrativos
+
+    cursos --> profesores
+    cursos --> administrativos
+    cursos --> estudiantes
+    cursos --> atributos
+
+    firma_digital --> django_user[Django auth.User]
+    firma_digital --> administrativos
