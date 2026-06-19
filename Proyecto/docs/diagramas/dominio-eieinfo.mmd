@@ -1,0 +1,35 @@
+erDiagram
+    FUNCIONARIO ||--o| PROFESOR : especializa
+    FUNCIONARIO ||--o| ADMINISTRATIVO : especializa
+    FUNCIONARIO ||--o{ NOMBRAMIENTO : tiene
+    FUNCIONARIO ||--o{ JEFATURA : ocupa
+    FUNCIONARIO ||--o{ COMISION : participa
+
+    CICLO ||--o{ NOMBRAMIENTO : agrupa
+    CICLO ||--o{ GRUPO : oferta
+    CICLO ||--o{ TFG : regula
+
+    LUGAR ||--o{ HORARIO : asigna
+    HORARIO ||--o{ GRUPO : calendariza
+
+    PROFESOR ||--o{ GRUPO : imparte
+    PROFESOR ||--o{ PROYECTO : dirige
+    PROFESOR ||--o{ TFG : asesora
+
+    ESTUDIANTE ||--o{ ASISTENCIA : solicita
+    ESTUDIANTE ||--o{ PRACTICA_PROFESIONAL : realiza
+    ESTUDIANTE ||--o{ PROYECTO_ELECTRICO : desarrolla
+    ESTUDIANTE ||--o{ TFG : desarrolla
+    ESTUDIANTE }o--|| PLAN_ESTUDIO : pertenece
+
+    CURSO ||--o{ GRUPO : se_ofrece_como
+    PLAN_ESTUDIO ||--o{ CURSO : contiene
+
+    PROYECTO ||--o{ PROYECTO_CICLO : se_planifica
+    LABORATORIO ||--o{ PROYECTO : aloja
+
+    TFG ||--o{ COMITE_ASESOR_TFG : tiene
+    TFG ||--o{ DEFENSA : culmina_en
+    TFG ||--o{ REVISION_REVISOR : recibe
+
+    FUNCIONARIO ||--o{ PDF_FIRMA_DIGITAL : sube_revisa
