@@ -2,13 +2,11 @@
 
 Sistema auditado: EIEInfo  
 Curso: IE-0417 - Diseno de software  
-Base de analisis: repositorio `EIEInfo`, especialmente `src/server`, `docker`, `docker-compose.yml`, `.drone.yml`, `requirements.txt` y configuracion Django.
+Estudiante: Raúl Villalobos Vega
+Profesor: Rafael Esteban Badilla Alvarado
 
-## 1. Proposito
 
-Esta entrega responde la pregunta guia de la auditoria:
-
-> Cuales son los principales problemas de diseno del sistema, por que importan y como se relacionan entre si?
+## 1. Introducción
 
 El analisis se concentra en la arquitectura real observada en el codigo. EIEInfo se comporta como un monolito Django organizado por aplicaciones internas: `estudiantes`, `profesores`, `administrativos`, `cursos`, `trabajos_finales`, `trabajo_final_de_graduacion`, `firma_digital`, `inventario`, `webpage`, entre otras. La separacion en apps ayuda a ubicar funcionalidad, pero no siempre implica separacion fuerte de responsabilidades, porque muchas reglas de negocio cruzan de un modulo a otro.
 
