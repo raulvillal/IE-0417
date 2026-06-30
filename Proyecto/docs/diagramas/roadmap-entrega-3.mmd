@@ -1,0 +1,28 @@
+gantt
+    title Hoja de ruta propuesta para mejoras de EIEInfo
+    dateFormat  YYYY-MM-DD
+    axisFormat  %d/%m
+
+    section Fase 0: preparación
+    Congelar línea base y smoke tests       :a1, 2026-07-01, 7d
+    Documentar variables y secretos        :a2, after a1, 5d
+
+    section Fase 1: bajo riesgo
+    Extraer configuración por ambiente     :b1, after a2, 7d
+    Actualizar documentación técnica       :b2, after a2, 5d
+    Agregar healthcheck y logs base        :b3, after a2, 7d
+
+    section Fase 2: dominio compartido
+    Definir core_academico                 :c1, after b1, 8d
+    Mover fachada de Ciclo/Lugar/Horario   :c2, after c1, 10d
+    Probar compatibilidad por módulo       :c3, after c2, 7d
+
+    section Fase 3: Consejo Asesor
+    Extraer servicios de horarios          :d1, after c3, 10d
+    Extraer servicios de nombramientos     :d2, after d1, 10d
+    Reducir vista consejo_asesor.py        :d3, after d2, 8d
+
+    section Fase 4: identidad y requisitos de graduación
+    Diseñar identidad unificada            :e1, after d3, 8d
+    Plan de migración de sesiones          :e2, after e1, 10d
+    Documentar TFG y proyecto eléctrico    :e3, after e1, 8d

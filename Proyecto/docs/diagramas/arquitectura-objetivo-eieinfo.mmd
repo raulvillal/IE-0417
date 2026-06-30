@@ -1,0 +1,42 @@
+flowchart TB
+    usuario["Usuarios institucionales"]
+    nginx["Nginx"]
+    app["Django / Gunicorn\nMonolito modular"]
+    db[("MariaDB / MySQL")]
+    env["Variables de entorno\n/ gestor de secretos"]
+    logs["Logs, healthchecks\n y monitoreo básico"]
+
+    subgraph django["Fronteras internas propuestas"]
+        identidad["identidad\nfachada común de acceso"]
+        auth["Django auth / sesiones\nUser, Group, permisos"]
+        dominio["core_academico\nCiclo, Lugar, Horario,\nFuncionario, Nombramiento"]
+        profesores["profesores\nportal docente"]
+        consejo["consejo_asesor\nservicios de caso de uso"]
+        cursos["cursos\noferta académica"]
+        estudiantes["estudiantes\nportal y trámites"]
+        tfg["graduacion\nrequisitos: TFG y proyecto eléctrico"]
+        firma["firma_digital\ndocumentos y autorización"]
+    end
+
+    usuario --> nginx --> app
+    app --> db
+    env --> app
+    app --> logs
+
+    profesores --> identidad
+    estudiantes --> identidad
+    firma --> identidad
+    identidad --> auth
+
+    profesores --> dominio
+    consejo --> dominio
+    cursos --> dominio
+    estudiantes --> dominio
+    tfg --> dominio
+    firma --> dominio
+
+    consejo --> cursos
+    consejo --> profesores
+    tfg --> estudiantes
+    tfg --> profesores
+    firma --> profesores
